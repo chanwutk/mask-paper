@@ -1,0 +1,14 @@
+\section{Introduction}
+In the world of pandemics, it’s important to protect each other to slow down the spread of COVID-19.
+According to Cheng et al. [1], wearing a mask is one of the most efficient ways to not pass on or to not receive COVID-19 from respiratory droplets.
+Therefore, people are required to wear masks in many indoor facilities.
+With this enforcement, each facility needs extra resources to monitor this activity.
+For instance, staffs in a restaurant need to make sure that all customers wear masks.
+We want to minimize the resources uses in this enforcement.
+Therefore, we solved this problem by creating a camera application that detects whether a person is wearing a mask or not.
+The application uses a convolutional neural network model for classification.
+Then, we created an application that makes use of the neural network model by filming a person and detecting whether the person is wearing a mask or not, frame by frame and in real-time.
+In the end, we evaluated our model performance, and we found that our model had a 92.16\% accuracy when testing with our dataset.
+With some incorrect predictions, we wanted to find out what causes the model to incorrectly classify some images.
+After the model was trained, we extracted the output of network layers from our model and compared the outputs from correctly classified images and incorrectly classified images.
+

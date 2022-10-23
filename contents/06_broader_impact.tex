@@ -1,0 +1,12 @@
+\section*{Broader Impact}
+
+In this paper, we created a camera application that classifies human faces if they are wearing masks or not.
+This application can make a big impact in the world of pandemics where people are required to wear masks inside indoor facilities.
+With this application, these facilities can reduce the number of staff to monitor this enforcement and use machines, instead.
+However, there is a downside to this application, as well.
+This camera application could raise concerns in privacy as it records human faces.
+In the real-world use, we would need to inform the visitors of these indoor facilities that our application only uses but not keep the video of anyone.
+We also explored the problem behind the inaccuracy of our application by visualizing the layer outputs of our model.
+We found that many incorrect classifications come from the fact that these images have many objects in the background and confuse our model.
+In future work, we would like to improve our application by adding another neural network that detects faces.
+Then, we can crop only the face part to be classified using our current model.
