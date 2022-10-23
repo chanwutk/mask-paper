@@ -1,0 +1,31 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_latex:
+    name: Build and Publish Resume
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v2
+
+    - name: Build LaTeX
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: main.tex
+
+    - name: Setup Build Folder
+      run: |
+        rm -rf ./build
+        mkdir ./build
+        cp ./index.html ./build/
+        cp ./main.pdf ./build/mask-paper.pdf
+    - name: Publish Website
+      uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
+      with:
+        repo-token: ${{ secrets.GH_PAT }}
+        site-directory: 'build'
